@@ -6,6 +6,7 @@ import smpplib.consts
 import time
 import uuid
 import struct
+import binascii
 
 # Configure logging with more detailed format
 logging.basicConfig(
@@ -16,6 +17,18 @@ logging.basicConfig(
         logging.StreamHandler(sys.stdout)
     ]
 )
+
+def hex_dump(data, prefix=''):
+    """Helper function to create readable hex dumps of binary data"""
+    hex_data = binascii.hexlify(data).decode()
+    chunks = [hex_data[i:i+2] for i in range(0, len(hex_data), 2)]
+    lines = [chunks[i:i+16] for i in range(0, len(chunks), 16)]
+    result = []
+    for line in lines:
+        hex_part = ' '.join(line)
+        ascii_part = ''.join(chr(int(c, 16)) if 32 <= int(c, 16) <= 126 else '.' for c in line)
+        result.append(f"{prefix}{hex_part:<48} | {ascii_part}")
+    return '\n'.join(result)
 
 class SMPPClient:
     def __init__(self, host, port, system_id, password):
@@ -105,9 +118,11 @@ class SMPPClient:
                 optional_params[self.TLV_AUTH_CODE] = auth_code.encode() + b'\0'
                 logging.debug(f"Added Auth Code TLV: {auth_code}")
             
-            logging.debug(f"Optional parameters: {optional_params}")
+            logging.debug(f"Optional parameters before sending: {optional_params}")
             
             # Send message with optional parameters
+
+            logging.debug(f"hex dump before sending PDU:\n{hex_dump(message.encode())}")
             response = self.client.send_message(
                 source_addr=source_addr,
                 destination_addr=destination_addr,
@@ -121,8 +136,8 @@ class SMPPClient:
                 dest_addr_npi=smpplib.consts.SMPP_NPI_ISDN,
                 optional_parameters=optional_params
             )
+            logging.debug(f"Hex dump of sent PDU:\n{hex_dump(response)}")
             
-            logging.info(f"Message sent successfully with response: {response.optional_parameters}")
             return True
             
         except Exception as e:

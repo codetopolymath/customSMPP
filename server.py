@@ -203,6 +203,7 @@ class SMPPServer:
         original_offset = offset
         
         try:
+            logging.debug(f"Raw TLV data: {body[offset:].hex()}")
             while offset < body_length:
                 remaining = body_length - offset
                 if remaining < 4:
