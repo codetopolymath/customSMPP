@@ -1,0 +1,712 @@
+2024-12-17 14:15:22,910 INFO     root:43 Connecting to 34.47.244.104:2775
+2024-12-17 14:15:22,910 INFO     smpp.Client.4302076096:134 Connecting to 34.47.244.104:2775...
+2024-12-17 14:15:22,938 DEBUG    root:49 System ID: rohitghawale
+2024-12-17 14:15:22,938 DEBUG    root:50 Password length: 5
+2024-12-17 14:15:22,938 DEBUG    smpp.Client.4302076096:159 Receiver mode
+2024-12-17 14:15:22,938 DEBUG    smpp.Client.4302076096:209 Sending bind_transceiver PDU
+2024-12-17 14:15:22,938 DEBUG    smpp.Client.4302076096:211 >>b'00000028000000090000000000000002726f68697467686177616c6500726f686974000034010100' (40 bytes)
+2024-12-17 14:15:22,939 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:15:22,958 DEBUG    smpp.Client.4302076096:256 <<b'0000001d800000090000000000000002726f68697467686177616c6500' (29 bytes)
+2024-12-17 14:15:22,958 DEBUG    smpp.Client.4302076096:264 Read bind_transceiver_resp PDU
+2024-12-17 14:15:22,958 INFO     root:63 Successfully bound as transceiver
+2024-12-17 14:15:22,958 INFO     root:161 Connected and bound successfully
+2024-12-17 14:15:22,958 INFO     root:81 Sending message: Hello, this is a test message!
+2024-12-17 14:15:22,958 DEBUG    root:82 Source: SANJUP
+2024-12-17 14:15:22,958 DEBUG    root:83 Destination: 1234567890
+2024-12-17 14:15:22,958 DEBUG    root:93 Added Template ID TLV: 1507167577648640421
+2024-12-17 14:15:22,958 DEBUG    root:100 Added PE ID TLV: 1501664220000010227
+2024-12-17 14:15:22,958 DEBUG    root:106 Added Auth Code TLV: 201f7f83-ca57-4269-800f-f448d775ca2a
+2024-12-17 14:15:22,958 DEBUG    root:108 Optional parameters: {5120: b'1507167577648640421', 5121: b'1501664220000010227', 5125: b'201f7f83-ca57-4269-800f-f448d775ca2a\x00'}
+2024-12-17 14:15:22,958 DEBUG    smpp.Client.4302076096:209 Sending submit_sm PDU
+2024-12-17 14:15:22,959 DEBUG    smpp.Client.4302076096:211 >>b'0000004f00000004000000000000000300010153414e4a555000010131323334353637383930000000000000010000001e48656c6c6f2c207468697320697320612074657374206d65737361676521' (79 bytes)
+2024-12-17 14:15:22,959 INFO     root:125 Message sent successfully with response: {5120: b'1507167577648640421', 5121: b'1501664220000010227', 5125: b'201f7f83-ca57-4269-800f-f448d775ca2a\x00'}
+2024-12-17 14:15:22,959 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:15:23,086 DEBUG    smpp.Client.4302076096:256 <<b'0000001180000004000000000000000300' (17 bytes)
+2024-12-17 14:15:23,087 DEBUG    smpp.Client.4302076096:264 Read submit_sm_resp PDU
+2024-12-17 14:15:23,087 WARNING  smpp.Client.4302076096:322 Message sent handler (Override me)
+2024-12-17 14:15:23,192 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:15:53,193 DEBUG    smpp.Client.4302076096:352 Socket timeout, listening again
+2024-12-17 14:15:53,195 DEBUG    smpp.Client.4302076096:209 Sending enquire_link PDU
+2024-12-17 14:15:53,195 DEBUG    smpp.Client.4302076096:211 >>b'00000010000000150000000000000004' (16 bytes)
+2024-12-17 14:15:53,301 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:15:53,301 DEBUG    smpp.Client.4302076096:256 <<b'00000010800000150000000000000004' (16 bytes)
+2024-12-17 14:15:53,302 DEBUG    smpp.Client.4302076096:264 Read enquire_link_resp PDU
+2024-12-17 14:15:53,407 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:16:23,409 DEBUG    smpp.Client.4302076096:352 Socket timeout, listening again
+2024-12-17 14:16:23,412 DEBUG    smpp.Client.4302076096:209 Sending enquire_link PDU
+2024-12-17 14:16:23,412 DEBUG    smpp.Client.4302076096:211 >>b'00000010000000150000000000000005' (16 bytes)
+2024-12-17 14:16:23,518 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:16:23,518 DEBUG    smpp.Client.4302076096:256 <<b'00000010800000150000000000000005' (16 bytes)
+2024-12-17 14:16:23,518 DEBUG    smpp.Client.4302076096:264 Read enquire_link_resp PDU
+2024-12-17 14:16:23,624 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:16:53,625 DEBUG    smpp.Client.4302076096:352 Socket timeout, listening again
+2024-12-17 14:16:53,627 DEBUG    smpp.Client.4302076096:209 Sending enquire_link PDU
+2024-12-17 14:16:53,627 DEBUG    smpp.Client.4302076096:211 >>b'00000010000000150000000000000006' (16 bytes)
+2024-12-17 14:16:53,729 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:16:53,729 DEBUG    smpp.Client.4302076096:256 <<b'00000010800000150000000000000006' (16 bytes)
+2024-12-17 14:16:53,729 DEBUG    smpp.Client.4302076096:264 Read enquire_link_resp PDU
+2024-12-17 14:16:53,835 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:17:23,836 DEBUG    smpp.Client.4302076096:352 Socket timeout, listening again
+2024-12-17 14:17:23,838 DEBUG    smpp.Client.4302076096:209 Sending enquire_link PDU
+2024-12-17 14:17:23,838 DEBUG    smpp.Client.4302076096:211 >>b'00000010000000150000000000000007' (16 bytes)
+2024-12-17 14:17:23,941 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:17:23,942 DEBUG    smpp.Client.4302076096:256 <<b'00000010800000150000000000000007' (16 bytes)
+2024-12-17 14:17:23,942 DEBUG    smpp.Client.4302076096:264 Read enquire_link_resp PDU
+2024-12-17 14:17:24,047 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:17:54,049 DEBUG    smpp.Client.4302076096:352 Socket timeout, listening again
+2024-12-17 14:17:54,052 DEBUG    smpp.Client.4302076096:209 Sending enquire_link PDU
+2024-12-17 14:17:54,052 DEBUG    smpp.Client.4302076096:211 >>b'00000010000000150000000000000008' (16 bytes)
+2024-12-17 14:17:54,153 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:17:54,154 DEBUG    smpp.Client.4302076096:256 <<b'00000010800000150000000000000008' (16 bytes)
+2024-12-17 14:17:54,154 DEBUG    smpp.Client.4302076096:264 Read enquire_link_resp PDU
+2024-12-17 14:17:54,259 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:18:24,260 DEBUG    smpp.Client.4302076096:352 Socket timeout, listening again
+2024-12-17 14:18:24,261 DEBUG    smpp.Client.4302076096:209 Sending enquire_link PDU
+2024-12-17 14:18:24,261 DEBUG    smpp.Client.4302076096:211 >>b'00000010000000150000000000000009' (16 bytes)
+2024-12-17 14:18:24,365 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:18:24,366 DEBUG    smpp.Client.4302076096:256 <<b'00000010800000150000000000000009' (16 bytes)
+2024-12-17 14:18:24,366 DEBUG    smpp.Client.4302076096:264 Read enquire_link_resp PDU
+2024-12-17 14:18:24,468 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:18:54,469 DEBUG    smpp.Client.4302076096:352 Socket timeout, listening again
+2024-12-17 14:18:54,470 DEBUG    smpp.Client.4302076096:209 Sending enquire_link PDU
+2024-12-17 14:18:54,470 DEBUG    smpp.Client.4302076096:211 >>b'0000001000000015000000000000000a' (16 bytes)
+2024-12-17 14:18:54,571 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:18:54,572 DEBUG    smpp.Client.4302076096:256 <<b'0000001080000015000000000000000a' (16 bytes)
+2024-12-17 14:18:54,572 DEBUG    smpp.Client.4302076096:264 Read enquire_link_resp PDU
+2024-12-17 14:18:54,677 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:19:24,677 DEBUG    smpp.Client.4302076096:352 Socket timeout, listening again
+2024-12-17 14:19:24,678 DEBUG    smpp.Client.4302076096:209 Sending enquire_link PDU
+2024-12-17 14:19:24,678 DEBUG    smpp.Client.4302076096:211 >>b'0000001000000015000000000000000b' (16 bytes)
+2024-12-17 14:19:24,783 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:19:24,784 DEBUG    smpp.Client.4302076096:256 <<b'0000001080000015000000000000000b' (16 bytes)
+2024-12-17 14:19:24,784 DEBUG    smpp.Client.4302076096:264 Read enquire_link_resp PDU
+2024-12-17 14:19:24,889 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:19:39,380 INFO     root:186 Shutting down...
+2024-12-17 14:19:39,381 DEBUG    smpp.Client.4302076096:209 Sending unbind PDU
+2024-12-17 14:19:39,381 DEBUG    smpp.Client.4302076096:211 >>b'0000001000000006000000000000000c' (16 bytes)
+2024-12-17 14:19:39,381 DEBUG    smpp.Client.4302076096:244 Waiting for PDU...
+2024-12-17 14:19:39,407 DEBUG    smpp.Client.4302076096:256 <<b'0000001080000006000000000000000c' (16 bytes)
+2024-12-17 14:19:39,408 DEBUG    smpp.Client.4302076096:264 Read unbind_resp PDU
+2024-12-17 14:19:39,408 INFO     root:139 Unbound from server
+2024-12-17 14:19:39,408 INFO     smpp.Client.4302076096:146 Disconnecting...
+2024-12-17 14:19:39,408 INFO     root:144 Disconnected from SMPP server
+2024-12-17 14:21:20,295 INFO     root:65 Connecting to 34.47.244.104:2775
+2024-12-17 14:21:20,296 INFO     smpp.Client.4311496896:134 Connecting to 34.47.244.104:2775...
+2024-12-17 14:21:20,320 DEBUG    root:69 System ID: rohitghawale
+2024-12-17 14:21:20,320 DEBUG    root:70 Password length: 5
+2024-12-17 14:21:20,320 DEBUG    smpp.Client.4311496896:159 Receiver mode
+2024-12-17 14:21:20,321 DEBUG    smpp.Client.4311496896:209 Sending bind_transceiver PDU
+2024-12-17 14:21:20,321 DEBUG    smpp.Client.4311496896:211 >>b'00000028000000090000000000000002726f68697467686177616c6500726f686974000034010100' (40 bytes)
+2024-12-17 14:21:20,321 DEBUG    smpp.Client.4311496896:244 Waiting for PDU...
+2024-12-17 14:21:20,341 DEBUG    smpp.Client.4311496896:256 <<b'0000001d800000090000000000000002726f68697467686177616c6500' (29 bytes)
+2024-12-17 14:21:20,341 DEBUG    smpp.Client.4311496896:264 Read bind_transceiver_resp PDU
+2024-12-17 14:21:20,342 INFO     root:83 Successfully bound as transceiver
+2024-12-17 14:21:20,342 INFO     root:187 Connected and bound successfully
+2024-12-17 14:21:20,342 INFO     root:101 Sending message: Hello, this is a test message!
+2024-12-17 14:21:20,342 DEBUG    root:102 Source: SANJUP
+2024-12-17 14:21:20,342 DEBUG    root:103 Destination: 1234567890
+2024-12-17 14:21:20,342 ERROR    root:155 Failed to send message: SubmitSM.__init__() missing 1 required positional argument: 'command'
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/home/funProject/SMPP/client.py", line 106, in send_message
+    submit_sm = smpplib.command.SubmitSM(
+        sequence=self.client.next_sequence(),
+    ...<9 lines>...
+        dest_addr_npi=smpplib.consts.SMPP_NPI_ISDN,
+    )
+TypeError: SubmitSM.__init__() missing 1 required positional argument: 'command'
+2024-12-17 14:21:20,346 DEBUG    smpp.Client.4311496896:244 Waiting for PDU...
+2024-12-17 14:21:50,348 DEBUG    smpp.Client.4311496896:352 Socket timeout, listening again
+2024-12-17 14:21:50,351 DEBUG    smpp.Client.4311496896:209 Sending enquire_link PDU
+2024-12-17 14:21:50,351 DEBUG    smpp.Client.4311496896:211 >>b'00000010000000150000000000000004' (16 bytes)
+2024-12-17 14:21:50,457 DEBUG    smpp.Client.4311496896:244 Waiting for PDU...
+2024-12-17 14:21:50,457 DEBUG    smpp.Client.4311496896:256 <<b'00000010800000150000000000000004' (16 bytes)
+2024-12-17 14:21:50,457 DEBUG    smpp.Client.4311496896:264 Read enquire_link_resp PDU
+2024-12-17 14:21:50,562 DEBUG    smpp.Client.4311496896:244 Waiting for PDU...
+2024-12-17 14:22:20,563 DEBUG    smpp.Client.4311496896:352 Socket timeout, listening again
+2024-12-17 14:22:20,565 DEBUG    smpp.Client.4311496896:209 Sending enquire_link PDU
+2024-12-17 14:22:20,565 DEBUG    smpp.Client.4311496896:211 >>b'00000010000000150000000000000005' (16 bytes)
+2024-12-17 14:22:20,670 DEBUG    smpp.Client.4311496896:244 Waiting for PDU...
+2024-12-17 14:22:20,671 DEBUG    smpp.Client.4311496896:256 <<b'00000010800000150000000000000005' (16 bytes)
+2024-12-17 14:22:20,672 DEBUG    smpp.Client.4311496896:264 Read enquire_link_resp PDU
+2024-12-17 14:22:20,777 DEBUG    smpp.Client.4311496896:244 Waiting for PDU...
+2024-12-17 14:22:50,777 DEBUG    smpp.Client.4311496896:352 Socket timeout, listening again
+2024-12-17 14:22:50,778 DEBUG    smpp.Client.4311496896:209 Sending enquire_link PDU
+2024-12-17 14:22:50,778 DEBUG    smpp.Client.4311496896:211 >>b'00000010000000150000000000000006' (16 bytes)
+2024-12-17 14:22:50,883 DEBUG    smpp.Client.4311496896:244 Waiting for PDU...
+2024-12-17 14:22:50,884 DEBUG    smpp.Client.4311496896:256 <<b'00000010800000150000000000000006' (16 bytes)
+2024-12-17 14:22:50,884 DEBUG    smpp.Client.4311496896:264 Read enquire_link_resp PDU
+2024-12-17 14:22:50,989 DEBUG    smpp.Client.4311496896:244 Waiting for PDU...
+2024-12-17 14:23:20,990 DEBUG    smpp.Client.4311496896:352 Socket timeout, listening again
+2024-12-17 14:23:20,992 DEBUG    smpp.Client.4311496896:209 Sending enquire_link PDU
+2024-12-17 14:23:20,992 DEBUG    smpp.Client.4311496896:211 >>b'00000010000000150000000000000007' (16 bytes)
+2024-12-17 14:23:21,098 DEBUG    smpp.Client.4311496896:244 Waiting for PDU...
+2024-12-17 14:23:21,098 DEBUG    smpp.Client.4311496896:256 <<b'00000010800000150000000000000007' (16 bytes)
+2024-12-17 14:23:21,099 DEBUG    smpp.Client.4311496896:264 Read enquire_link_resp PDU
+2024-12-17 14:23:21,200 DEBUG    smpp.Client.4311496896:244 Waiting for PDU...
+2024-12-17 14:23:51,200 DEBUG    smpp.Client.4311496896:352 Socket timeout, listening again
+2024-12-17 14:23:51,202 DEBUG    smpp.Client.4311496896:209 Sending enquire_link PDU
+2024-12-17 14:23:51,202 DEBUG    smpp.Client.4311496896:211 >>b'00000010000000150000000000000008' (16 bytes)
+2024-12-17 14:23:51,307 DEBUG    smpp.Client.4311496896:244 Waiting for PDU...
+2024-12-17 14:23:51,308 DEBUG    smpp.Client.4311496896:256 <<b'00000010800000150000000000000008' (16 bytes)
+2024-12-17 14:23:51,308 DEBUG    smpp.Client.4311496896:264 Read enquire_link_resp PDU
+2024-12-17 14:23:51,408 DEBUG    smpp.Client.4311496896:244 Waiting for PDU...
+2024-12-17 14:24:21,410 DEBUG    smpp.Client.4311496896:352 Socket timeout, listening again
+2024-12-17 14:24:21,411 DEBUG    smpp.Client.4311496896:209 Sending enquire_link PDU
+2024-12-17 14:24:21,411 DEBUG    smpp.Client.4311496896:211 >>b'00000010000000150000000000000009' (16 bytes)
+2024-12-17 14:24:21,517 DEBUG    smpp.Client.4311496896:244 Waiting for PDU...
+2024-12-17 14:24:21,517 DEBUG    smpp.Client.4311496896:256 <<b'00000010800000150000000000000009' (16 bytes)
+2024-12-17 14:24:21,517 DEBUG    smpp.Client.4311496896:264 Read enquire_link_resp PDU
+2024-12-17 14:24:21,622 DEBUG    smpp.Client.4311496896:244 Waiting for PDU...
+2024-12-17 14:24:46,673 INFO     root:212 Shutting down...
+2024-12-17 14:24:46,674 DEBUG    smpp.Client.4311496896:209 Sending unbind PDU
+2024-12-17 14:24:46,674 DEBUG    smpp.Client.4311496896:211 >>b'0000001000000006000000000000000a' (16 bytes)
+2024-12-17 14:24:46,674 DEBUG    smpp.Client.4311496896:244 Waiting for PDU...
+2024-12-17 14:24:46,714 DEBUG    smpp.Client.4311496896:256 <<b'0000001080000006000000000000000a' (16 bytes)
+2024-12-17 14:24:46,714 DEBUG    smpp.Client.4311496896:264 Read unbind_resp PDU
+2024-12-17 14:24:46,714 INFO     root:165 Unbound from server
+2024-12-17 14:24:46,714 INFO     smpp.Client.4311496896:146 Disconnecting...
+2024-12-17 14:24:46,714 INFO     root:170 Disconnected from SMPP server
+2024-12-17 14:24:52,733 INFO     root:65 Connecting to 34.47.244.104:2775
+2024-12-17 14:24:52,733 INFO     smpp.Client.4305828032:134 Connecting to 34.47.244.104:2775...
+2024-12-17 14:24:52,766 DEBUG    root:69 System ID: rohitghawale
+2024-12-17 14:24:52,766 DEBUG    root:70 Password length: 5
+2024-12-17 14:24:52,766 DEBUG    smpp.Client.4305828032:159 Receiver mode
+2024-12-17 14:24:52,766 DEBUG    smpp.Client.4305828032:209 Sending bind_transceiver PDU
+2024-12-17 14:24:52,766 DEBUG    smpp.Client.4305828032:211 >>b'00000028000000090000000000000002726f68697467686177616c6500726f686974000034010100' (40 bytes)
+2024-12-17 14:24:52,766 DEBUG    smpp.Client.4305828032:244 Waiting for PDU...
+2024-12-17 14:24:52,794 DEBUG    smpp.Client.4305828032:256 <<b'0000001d800000090000000000000002726f68697467686177616c6500' (29 bytes)
+2024-12-17 14:24:52,794 DEBUG    smpp.Client.4305828032:264 Read bind_transceiver_resp PDU
+2024-12-17 14:24:52,794 INFO     root:83 Successfully bound as transceiver
+2024-12-17 14:24:52,794 INFO     root:171 Connected and bound successfully
+2024-12-17 14:24:52,794 INFO     root:101 Sending message: Hello, this is a test message!
+2024-12-17 14:24:52,794 DEBUG    root:102 Source: SANJUP
+2024-12-17 14:24:52,794 DEBUG    root:103 Destination: 1234567890
+2024-12-17 14:24:52,794 ERROR    root:139 Failed to send message: module 'smpplib.command' has no attribute 'Submit'
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/home/funProject/SMPP/client.py", line 106, in send_message
+    submit_sm = smpplib.command.Submit(
+                ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'smpplib.command' has no attribute 'Submit'. Did you mean: 'SubmitSM'?
+2024-12-17 14:24:52,800 DEBUG    smpp.Client.4305828032:244 Waiting for PDU...
+2024-12-17 14:25:00,911 INFO     root:196 Shutting down...
+2024-12-17 14:25:00,911 DEBUG    smpp.Client.4305828032:209 Sending unbind PDU
+2024-12-17 14:25:00,912 DEBUG    smpp.Client.4305828032:211 >>b'00000010000000060000000000000003' (16 bytes)
+2024-12-17 14:25:00,912 DEBUG    smpp.Client.4305828032:244 Waiting for PDU...
+2024-12-17 14:25:00,944 DEBUG    smpp.Client.4305828032:256 <<b'00000010800000060000000000000003' (16 bytes)
+2024-12-17 14:25:00,945 DEBUG    smpp.Client.4305828032:264 Read unbind_resp PDU
+2024-12-17 14:25:00,945 INFO     root:149 Unbound from server
+2024-12-17 14:25:00,945 INFO     smpp.Client.4305828032:146 Disconnecting...
+2024-12-17 14:25:00,945 INFO     root:154 Disconnected from SMPP server
+2024-12-17 14:25:55,260 INFO     root:65 Connecting to 34.47.244.104:2775
+2024-12-17 14:25:55,261 INFO     smpp.Client.4335352000:134 Connecting to 34.47.244.104:2775...
+2024-12-17 14:25:55,296 DEBUG    root:69 System ID: rohitghawale
+2024-12-17 14:25:55,296 DEBUG    root:70 Password length: 5
+2024-12-17 14:25:55,296 DEBUG    smpp.Client.4335352000:159 Receiver mode
+2024-12-17 14:25:55,296 DEBUG    smpp.Client.4335352000:209 Sending bind_transceiver PDU
+2024-12-17 14:25:55,297 DEBUG    smpp.Client.4335352000:211 >>b'00000028000000090000000000000002726f68697467686177616c6500726f686974000034010100' (40 bytes)
+2024-12-17 14:25:55,297 DEBUG    smpp.Client.4335352000:244 Waiting for PDU...
+2024-12-17 14:25:55,327 DEBUG    smpp.Client.4335352000:256 <<b'0000001d800000090000000000000002726f68697467686177616c6500' (29 bytes)
+2024-12-17 14:25:55,327 DEBUG    smpp.Client.4335352000:264 Read bind_transceiver_resp PDU
+2024-12-17 14:25:55,327 INFO     root:83 Successfully bound as transceiver
+2024-12-17 14:25:55,327 INFO     root:171 Connected and bound successfully
+2024-12-17 14:25:55,327 INFO     root:101 Sending message: Hello, this is a test message!
+2024-12-17 14:25:55,327 DEBUG    root:102 Source: SANJUP
+2024-12-17 14:25:55,327 DEBUG    root:103 Destination: 1234567890
+2024-12-17 14:25:55,327 ERROR    root:139 Failed to send message: module 'smpplib.consts' has no attribute 'SUBMIT_SM'
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/home/funProject/SMPP/client.py", line 107, in send_message
+    smpplib.consts.SUBMIT_SM,
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'smpplib.consts' has no attribute 'SUBMIT_SM'
+2024-12-17 14:25:55,334 DEBUG    smpp.Client.4335352000:244 Waiting for PDU...
+2024-12-17 14:26:25,335 DEBUG    smpp.Client.4335352000:352 Socket timeout, listening again
+2024-12-17 14:26:25,338 DEBUG    smpp.Client.4335352000:209 Sending enquire_link PDU
+2024-12-17 14:26:25,338 DEBUG    smpp.Client.4335352000:211 >>b'00000010000000150000000000000003' (16 bytes)
+2024-12-17 14:26:25,444 DEBUG    smpp.Client.4335352000:244 Waiting for PDU...
+2024-12-17 14:26:25,445 DEBUG    smpp.Client.4335352000:256 <<b'00000010800000150000000000000003' (16 bytes)
+2024-12-17 14:26:25,445 DEBUG    smpp.Client.4335352000:264 Read enquire_link_resp PDU
+2024-12-17 14:26:25,550 DEBUG    smpp.Client.4335352000:244 Waiting for PDU...
+2024-12-17 14:26:55,552 DEBUG    smpp.Client.4335352000:352 Socket timeout, listening again
+2024-12-17 14:26:55,553 DEBUG    smpp.Client.4335352000:209 Sending enquire_link PDU
+2024-12-17 14:26:55,553 DEBUG    smpp.Client.4335352000:211 >>b'00000010000000150000000000000004' (16 bytes)
+2024-12-17 14:26:55,655 DEBUG    smpp.Client.4335352000:244 Waiting for PDU...
+2024-12-17 14:26:55,656 DEBUG    smpp.Client.4335352000:256 <<b'00000010800000150000000000000004' (16 bytes)
+2024-12-17 14:26:55,656 DEBUG    smpp.Client.4335352000:264 Read enquire_link_resp PDU
+2024-12-17 14:26:55,761 DEBUG    smpp.Client.4335352000:244 Waiting for PDU...
+2024-12-17 14:27:25,762 DEBUG    smpp.Client.4335352000:352 Socket timeout, listening again
+2024-12-17 14:27:25,765 DEBUG    smpp.Client.4335352000:209 Sending enquire_link PDU
+2024-12-17 14:27:25,766 DEBUG    smpp.Client.4335352000:211 >>b'00000010000000150000000000000005' (16 bytes)
+2024-12-17 14:27:25,868 DEBUG    smpp.Client.4335352000:244 Waiting for PDU...
+2024-12-17 14:27:25,868 DEBUG    smpp.Client.4335352000:256 <<b'00000010800000150000000000000005' (16 bytes)
+2024-12-17 14:27:25,868 DEBUG    smpp.Client.4335352000:264 Read enquire_link_resp PDU
+2024-12-17 14:27:25,973 DEBUG    smpp.Client.4335352000:244 Waiting for PDU...
+2024-12-17 14:27:55,553 INFO     root:196 Shutting down...
+2024-12-17 14:27:55,555 DEBUG    smpp.Client.4335352000:209 Sending unbind PDU
+2024-12-17 14:27:55,555 DEBUG    smpp.Client.4335352000:211 >>b'00000010000000060000000000000006' (16 bytes)
+2024-12-17 14:27:55,555 DEBUG    smpp.Client.4335352000:244 Waiting for PDU...
+2024-12-17 14:27:55,588 DEBUG    smpp.Client.4335352000:256 <<b'00000010800000060000000000000006' (16 bytes)
+2024-12-17 14:27:55,589 DEBUG    smpp.Client.4335352000:264 Read unbind_resp PDU
+2024-12-17 14:27:55,589 INFO     root:149 Unbound from server
+2024-12-17 14:27:55,589 INFO     smpp.Client.4335352000:146 Disconnecting...
+2024-12-17 14:27:55,589 INFO     root:154 Disconnected from SMPP server
+2024-12-17 14:27:57,455 INFO     root:66 Connecting to 34.47.244.104:2775
+2024-12-17 14:27:57,455 INFO     smpp.Client.4374280384:134 Connecting to 34.47.244.104:2775...
+2024-12-17 14:27:57,490 DEBUG    root:70 System ID: rohitghawale
+2024-12-17 14:27:57,490 DEBUG    root:71 Password length: 5
+2024-12-17 14:27:57,490 DEBUG    smpp.Client.4374280384:159 Receiver mode
+2024-12-17 14:27:57,490 DEBUG    smpp.Client.4374280384:209 Sending bind_transceiver PDU
+2024-12-17 14:27:57,491 DEBUG    smpp.Client.4374280384:211 >>b'00000028000000090000000000000002726f68697467686177616c6500726f686974000034010100' (40 bytes)
+2024-12-17 14:27:57,491 DEBUG    smpp.Client.4374280384:244 Waiting for PDU...
+2024-12-17 14:27:57,520 DEBUG    smpp.Client.4374280384:256 <<b'0000001d800000090000000000000002726f68697467686177616c6500' (29 bytes)
+2024-12-17 14:27:57,520 DEBUG    smpp.Client.4374280384:264 Read bind_transceiver_resp PDU
+2024-12-17 14:27:57,520 INFO     root:84 Successfully bound as transceiver
+2024-12-17 14:27:57,520 INFO     root:172 Connected and bound successfully
+2024-12-17 14:27:57,520 INFO     root:102 Sending message: Hello, this is a test message!
+2024-12-17 14:27:57,520 DEBUG    root:103 Source: SANJUP
+2024-12-17 14:27:57,520 DEBUG    root:104 Destination: 1234567890
+2024-12-17 14:27:57,520 ERROR    root:140 Failed to send message: 'default_client' object has no attribute 'next_sequence'
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/home/funProject/SMPP/client.py", line 107, in send_message
+    submit_sm = smpplib.command.SubmitSM(
+        self.SUBMIT_SM,
+    ...<9 lines>...
+        dest_addr_npi=smpplib.consts.SMPP_NPI_ISDN,
+    )
+  File "/Users/mac/Desktop/home/funProject/venvSmppServer/lib/python3.13/site-packages/smpplib/command.py", line 724, in __init__
+    super(SubmitSM, self).__init__(command, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Desktop/home/funProject/venvSmppServer/lib/python3.13/site-packages/smpplib/command.py", line 100, in __init__
+    self.sequence = self._next_seq()
+                    ~~~~~~~~~~~~~~^^
+  File "/Users/mac/Desktop/home/funProject/venvSmppServer/lib/python3.13/site-packages/smpplib/pdu.py", line 68, in _next_seq
+    return self._client.next_sequence()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'default_client' object has no attribute 'next_sequence'
+2024-12-17 14:27:57,526 DEBUG    smpp.Client.4374280384:244 Waiting for PDU...
+2024-12-17 14:28:27,528 DEBUG    smpp.Client.4374280384:352 Socket timeout, listening again
+2024-12-17 14:28:27,530 DEBUG    smpp.Client.4374280384:209 Sending enquire_link PDU
+2024-12-17 14:28:27,530 DEBUG    smpp.Client.4374280384:211 >>b'00000010000000150000000000000003' (16 bytes)
+2024-12-17 14:28:27,635 DEBUG    smpp.Client.4374280384:244 Waiting for PDU...
+2024-12-17 14:28:27,636 DEBUG    smpp.Client.4374280384:256 <<b'00000010800000150000000000000003' (16 bytes)
+2024-12-17 14:28:27,636 DEBUG    smpp.Client.4374280384:264 Read enquire_link_resp PDU
+2024-12-17 14:28:27,740 DEBUG    smpp.Client.4374280384:244 Waiting for PDU...
+2024-12-17 14:28:57,741 DEBUG    smpp.Client.4374280384:352 Socket timeout, listening again
+2024-12-17 14:28:57,741 DEBUG    smpp.Client.4374280384:209 Sending enquire_link PDU
+2024-12-17 14:28:57,742 DEBUG    smpp.Client.4374280384:211 >>b'00000010000000150000000000000004' (16 bytes)
+2024-12-17 14:28:57,847 DEBUG    smpp.Client.4374280384:244 Waiting for PDU...
+2024-12-17 14:28:57,848 DEBUG    smpp.Client.4374280384:256 <<b'00000010800000150000000000000004' (16 bytes)
+2024-12-17 14:28:57,848 DEBUG    smpp.Client.4374280384:264 Read enquire_link_resp PDU
+2024-12-17 14:28:57,953 DEBUG    smpp.Client.4374280384:244 Waiting for PDU...
+2024-12-17 14:29:07,757 INFO     root:197 Shutting down...
+2024-12-17 14:29:07,757 DEBUG    smpp.Client.4374280384:209 Sending unbind PDU
+2024-12-17 14:29:07,758 DEBUG    smpp.Client.4374280384:211 >>b'00000010000000060000000000000005' (16 bytes)
+2024-12-17 14:29:07,758 DEBUG    smpp.Client.4374280384:244 Waiting for PDU...
+2024-12-17 14:29:07,793 DEBUG    smpp.Client.4374280384:256 <<b'00000010800000060000000000000005' (16 bytes)
+2024-12-17 14:29:07,793 DEBUG    smpp.Client.4374280384:264 Read unbind_resp PDU
+2024-12-17 14:29:07,793 INFO     root:150 Unbound from server
+2024-12-17 14:29:07,793 INFO     smpp.Client.4374280384:146 Disconnecting...
+2024-12-17 14:29:07,793 INFO     root:155 Disconnected from SMPP server
+2024-12-17 14:29:09,779 INFO     root:66 Connecting to 34.47.244.104:2775
+2024-12-17 14:29:09,779 INFO     smpp.Client.4366088384:134 Connecting to 34.47.244.104:2775...
+2024-12-17 14:29:09,815 DEBUG    root:70 System ID: rohitghawale
+2024-12-17 14:29:09,815 DEBUG    root:71 Password length: 5
+2024-12-17 14:29:09,815 DEBUG    smpp.Client.4366088384:159 Receiver mode
+2024-12-17 14:29:09,815 DEBUG    smpp.Client.4366088384:209 Sending bind_transceiver PDU
+2024-12-17 14:29:09,816 DEBUG    smpp.Client.4366088384:211 >>b'00000028000000090000000000000002726f68697467686177616c6500726f686974000034010100' (40 bytes)
+2024-12-17 14:29:09,816 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:29:09,863 DEBUG    smpp.Client.4366088384:256 <<b'0000001d800000090000000000000002726f68697467686177616c6500' (29 bytes)
+2024-12-17 14:29:09,863 DEBUG    smpp.Client.4366088384:264 Read bind_transceiver_resp PDU
+2024-12-17 14:29:09,863 INFO     root:84 Successfully bound as transceiver
+2024-12-17 14:29:09,863 INFO     root:172 Connected and bound successfully
+2024-12-17 14:29:09,863 INFO     root:102 Sending message: Hello, this is a test message!
+2024-12-17 14:29:09,863 DEBUG    root:103 Source: SANJUP
+2024-12-17 14:29:09,863 DEBUG    root:104 Destination: 1234567890
+2024-12-17 14:29:09,863 DEBUG    root:123 Added Template ID TLV: 1507167577648640421
+2024-12-17 14:29:09,863 DEBUG    root:127 Added PE ID TLV: 1501664220000010227
+2024-12-17 14:29:09,863 DEBUG    root:131 Added Auth Code TLV: b98f05f8-9d65-475c-9c36-6bfa751c70c3
+2024-12-17 14:29:09,863 DEBUG    smpp.Client.4366088384:209 Sending submit_sm PDU
+2024-12-17 14:29:09,863 DEBUG    smpp.Client.4366088384:211 >>b'0000004f00000004000000000000000300010153414e4a555000010131323334353637383930000000000000010000001e48656c6c6f2c207468697320697320612074657374206d65737361676521' (79 bytes)
+2024-12-17 14:29:09,863 INFO     root:136 Message sent successfully with response: <smpplib.command.SubmitSM object at 0x1043d3cb0>
+2024-12-17 14:29:09,864 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:29:10,000 DEBUG    smpp.Client.4366088384:256 <<b'0000001180000004000000000000000300' (17 bytes)
+2024-12-17 14:29:10,001 DEBUG    smpp.Client.4366088384:264 Read submit_sm_resp PDU
+2024-12-17 14:29:10,001 WARNING  smpp.Client.4366088384:322 Message sent handler (Override me)
+2024-12-17 14:29:10,107 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:29:40,108 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:29:40,110 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:29:40,110 DEBUG    smpp.Client.4366088384:211 >>b'00000010000000150000000000000004' (16 bytes)
+2024-12-17 14:29:40,211 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:29:40,211 DEBUG    smpp.Client.4366088384:256 <<b'00000010800000150000000000000004' (16 bytes)
+2024-12-17 14:29:40,212 DEBUG    smpp.Client.4366088384:264 Read enquire_link_resp PDU
+2024-12-17 14:29:40,317 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:30:10,318 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:30:10,319 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:30:10,319 DEBUG    smpp.Client.4366088384:211 >>b'00000010000000150000000000000005' (16 bytes)
+2024-12-17 14:30:10,421 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:30:10,422 DEBUG    smpp.Client.4366088384:256 <<b'00000010800000150000000000000005' (16 bytes)
+2024-12-17 14:30:10,422 DEBUG    smpp.Client.4366088384:264 Read enquire_link_resp PDU
+2024-12-17 14:30:10,527 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:30:40,528 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:30:40,530 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:30:40,530 DEBUG    smpp.Client.4366088384:211 >>b'00000010000000150000000000000006' (16 bytes)
+2024-12-17 14:30:40,635 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:30:40,636 DEBUG    smpp.Client.4366088384:256 <<b'00000010800000150000000000000006' (16 bytes)
+2024-12-17 14:30:40,636 DEBUG    smpp.Client.4366088384:264 Read enquire_link_resp PDU
+2024-12-17 14:30:40,741 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:31:10,743 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:31:10,745 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:31:10,745 DEBUG    smpp.Client.4366088384:211 >>b'00000010000000150000000000000007' (16 bytes)
+2024-12-17 14:31:10,851 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:31:10,851 DEBUG    smpp.Client.4366088384:256 <<b'00000010800000150000000000000007' (16 bytes)
+2024-12-17 14:31:10,852 DEBUG    smpp.Client.4366088384:264 Read enquire_link_resp PDU
+2024-12-17 14:31:10,953 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:31:40,954 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:31:40,955 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:31:40,955 DEBUG    smpp.Client.4366088384:211 >>b'00000010000000150000000000000008' (16 bytes)
+2024-12-17 14:31:41,060 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:31:41,060 DEBUG    smpp.Client.4366088384:256 <<b'00000010800000150000000000000008' (16 bytes)
+2024-12-17 14:31:41,060 DEBUG    smpp.Client.4366088384:264 Read enquire_link_resp PDU
+2024-12-17 14:31:41,166 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:32:11,166 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:32:11,167 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:32:11,167 DEBUG    smpp.Client.4366088384:211 >>b'00000010000000150000000000000009' (16 bytes)
+2024-12-17 14:32:11,268 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:32:11,269 DEBUG    smpp.Client.4366088384:256 <<b'00000010800000150000000000000009' (16 bytes)
+2024-12-17 14:32:11,269 DEBUG    smpp.Client.4366088384:264 Read enquire_link_resp PDU
+2024-12-17 14:32:11,370 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:32:41,371 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:32:41,373 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:32:41,373 DEBUG    smpp.Client.4366088384:211 >>b'0000001000000015000000000000000a' (16 bytes)
+2024-12-17 14:32:41,474 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:32:41,474 DEBUG    smpp.Client.4366088384:256 <<b'0000001080000015000000000000000a' (16 bytes)
+2024-12-17 14:32:41,475 DEBUG    smpp.Client.4366088384:264 Read enquire_link_resp PDU
+2024-12-17 14:32:41,580 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:33:11,581 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:33:11,583 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:33:11,583 DEBUG    smpp.Client.4366088384:211 >>b'0000001000000015000000000000000b' (16 bytes)
+2024-12-17 14:33:11,689 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:33:11,689 DEBUG    smpp.Client.4366088384:256 <<b'0000001080000015000000000000000b' (16 bytes)
+2024-12-17 14:33:11,689 DEBUG    smpp.Client.4366088384:264 Read enquire_link_resp PDU
+2024-12-17 14:33:11,795 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:33:41,795 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:33:41,796 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:33:41,796 DEBUG    smpp.Client.4366088384:211 >>b'0000001000000015000000000000000c' (16 bytes)
+2024-12-17 14:33:41,899 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:33:41,899 DEBUG    smpp.Client.4366088384:256 <<b'0000001080000015000000000000000c' (16 bytes)
+2024-12-17 14:33:41,899 DEBUG    smpp.Client.4366088384:264 Read enquire_link_resp PDU
+2024-12-17 14:33:42,004 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:34:12,005 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:34:12,007 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:34:12,007 DEBUG    smpp.Client.4366088384:211 >>b'0000001000000015000000000000000d' (16 bytes)
+2024-12-17 14:34:12,112 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:34:12,112 DEBUG    smpp.Client.4366088384:256 <<b'0000001080000015000000000000000d' (16 bytes)
+2024-12-17 14:34:12,112 DEBUG    smpp.Client.4366088384:264 Read enquire_link_resp PDU
+2024-12-17 14:34:12,217 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:34:42,219 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:34:42,222 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:34:42,223 DEBUG    smpp.Client.4366088384:211 >>b'0000001000000015000000000000000e' (16 bytes)
+2024-12-17 14:34:42,328 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:34:42,329 DEBUG    smpp.Client.4366088384:256 <<b'0000001080000015000000000000000e' (16 bytes)
+2024-12-17 14:34:42,329 DEBUG    smpp.Client.4366088384:264 Read enquire_link_resp PDU
+2024-12-17 14:34:42,430 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:35:12,432 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:35:12,434 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:35:12,435 DEBUG    smpp.Client.4366088384:211 >>b'0000001000000015000000000000000f' (16 bytes)
+2024-12-17 14:35:12,539 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:35:12,539 DEBUG    smpp.Client.4366088384:256 <<b'0000001080000015000000000000000f' (16 bytes)
+2024-12-17 14:35:12,540 DEBUG    smpp.Client.4366088384:264 Read enquire_link_resp PDU
+2024-12-17 14:35:12,643 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:35:42,645 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:35:42,648 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:35:42,649 DEBUG    smpp.Client.4366088384:211 >>b'00000010000000150000000000000010' (16 bytes)
+2024-12-17 14:35:42,751 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:35:42,751 DEBUG    smpp.Client.4366088384:256 <<b'00000010800000150000000000000010' (16 bytes)
+2024-12-17 14:35:42,751 DEBUG    smpp.Client.4366088384:264 Read enquire_link_resp PDU
+2024-12-17 14:35:42,857 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:36:12,866 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:36:12,867 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:36:12,867 DEBUG    smpp.Client.4366088384:211 >>b'00000010000000150000000000000011' (16 bytes)
+2024-12-17 14:36:12,971 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:36:12,972 DEBUG    smpp.Client.4366088384:256 <<b'00000010800000150000000000000011' (16 bytes)
+2024-12-17 14:36:12,972 DEBUG    smpp.Client.4366088384:264 Read enquire_link_resp PDU
+2024-12-17 14:36:13,077 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:36:43,093 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:36:43,095 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:36:43,095 DEBUG    smpp.Client.4366088384:211 >>b'00000010000000150000000000000012' (16 bytes)
+2024-12-17 14:36:43,200 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:36:43,201 DEBUG    smpp.Client.4366088384:256 <<b'00000010800000150000000000000012' (16 bytes)
+2024-12-17 14:36:43,201 DEBUG    smpp.Client.4366088384:264 Read enquire_link_resp PDU
+2024-12-17 14:36:43,302 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:37:13,306 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:37:13,307 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:37:13,308 DEBUG    smpp.Client.4366088384:211 >>b'00000010000000150000000000000013' (16 bytes)
+2024-12-17 14:37:13,409 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:37:13,409 DEBUG    smpp.Client.4366088384:256 <<b'00000010800000150000000000000013' (16 bytes)
+2024-12-17 14:37:13,410 DEBUG    smpp.Client.4366088384:264 Read enquire_link_resp PDU
+2024-12-17 14:37:13,511 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:37:43,513 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:37:43,517 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:37:43,517 DEBUG    smpp.Client.4366088384:211 >>b'00000010000000150000000000000014' (16 bytes)
+2024-12-17 14:37:43,623 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:37:43,623 DEBUG    smpp.Client.4366088384:256 <<b'00000010800000150000000000000014' (16 bytes)
+2024-12-17 14:37:43,623 DEBUG    smpp.Client.4366088384:264 Read enquire_link_resp PDU
+2024-12-17 14:37:43,729 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:38:13,731 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:38:13,733 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:38:13,733 DEBUG    smpp.Client.4366088384:211 >>b'00000010000000150000000000000015' (16 bytes)
+2024-12-17 14:38:13,839 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:38:13,839 DEBUG    smpp.Client.4366088384:256 <<b'00000010800000150000000000000015' (16 bytes)
+2024-12-17 14:38:13,839 DEBUG    smpp.Client.4366088384:264 Read enquire_link_resp PDU
+2024-12-17 14:38:13,941 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:38:43,942 DEBUG    smpp.Client.4366088384:352 Socket timeout, listening again
+2024-12-17 14:38:43,945 DEBUG    smpp.Client.4366088384:209 Sending enquire_link PDU
+2024-12-17 14:38:43,946 DEBUG    smpp.Client.4366088384:211 >>b'00000010000000150000000000000016' (16 bytes)
+2024-12-17 14:38:44,050 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:38:44,051 ERROR    root:193 Error reading PDU: 
+2024-12-17 14:38:44,051 DEBUG    smpp.Client.4366088384:209 Sending unbind PDU
+2024-12-17 14:38:44,051 DEBUG    smpp.Client.4366088384:211 >>b'00000010000000060000000000000017' (16 bytes)
+2024-12-17 14:38:44,052 DEBUG    smpp.Client.4366088384:244 Waiting for PDU...
+2024-12-17 14:38:44,052 ERROR    root:152 Error unbinding: 
+2024-12-17 14:38:44,052 INFO     smpp.Client.4366088384:146 Disconnecting...
+2024-12-17 14:38:44,052 WARNING  smpp.Client.4366088384:149 <smpplib.client.Client object at 0x1043d38c0> is disconnecting in the bound state
+2024-12-17 14:38:44,052 INFO     root:155 Disconnected from SMPP server
+2024-12-17 14:55:55,337 INFO     root:66 Connecting to 34.47.244.104:2775
+2024-12-17 14:55:55,338 INFO     smpp.Client.4333664448:134 Connecting to 34.47.244.104:2775...
+2024-12-17 14:55:55,381 DEBUG    root:70 System ID: rohitghawale
+2024-12-17 14:55:55,381 DEBUG    root:71 Password length: 5
+2024-12-17 14:55:55,381 DEBUG    smpp.Client.4333664448:159 Receiver mode
+2024-12-17 14:55:55,381 DEBUG    smpp.Client.4333664448:209 Sending bind_transceiver PDU
+2024-12-17 14:55:55,381 DEBUG    smpp.Client.4333664448:211 >>b'00000028000000090000000000000002726f68697467686177616c6500726f686974000034010100' (40 bytes)
+2024-12-17 14:55:55,381 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 14:55:55,412 DEBUG    smpp.Client.4333664448:256 <<b'0000001d800000090000000000000002726f68697467686177616c6500' (29 bytes)
+2024-12-17 14:55:55,413 DEBUG    smpp.Client.4333664448:264 Read bind_transceiver_resp PDU
+2024-12-17 14:55:55,413 INFO     root:84 Successfully bound as transceiver
+2024-12-17 14:55:55,413 INFO     root:172 Connected and bound successfully
+2024-12-17 14:55:55,413 INFO     root:102 Sending message: Hello, this is a test message!
+2024-12-17 14:55:55,413 DEBUG    root:103 Source: SANJUP
+2024-12-17 14:55:55,413 DEBUG    root:104 Destination: 1234567890
+2024-12-17 14:55:55,413 DEBUG    root:123 Added Template ID TLV: 1507167577648640421
+2024-12-17 14:55:55,413 DEBUG    root:127 Added PE ID TLV: 1501664220000010227
+2024-12-17 14:55:55,413 DEBUG    root:131 Added Auth Code TLV: 6b28e6a3-5c52-4805-b90a-abd4b33a392d
+2024-12-17 14:55:55,413 DEBUG    smpp.Client.4333664448:209 Sending submit_sm PDU
+2024-12-17 14:55:55,413 DEBUG    smpp.Client.4333664448:211 >>b'0000004f00000004000000000000000300010153414e4a555000010131323334353637383930000000000000010000001e48656c6c6f2c207468697320697320612074657374206d65737361676521' (79 bytes)
+2024-12-17 14:55:55,413 INFO     root:136 Message sent successfully with response: <smpplib.command.SubmitSM object at 0x1024e7cb0>
+2024-12-17 14:55:55,413 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 14:55:55,556 DEBUG    smpp.Client.4333664448:256 <<b'0000001180000004000000000000000300' (17 bytes)
+2024-12-17 14:55:55,557 DEBUG    smpp.Client.4333664448:264 Read submit_sm_resp PDU
+2024-12-17 14:55:55,557 WARNING  smpp.Client.4333664448:322 Message sent handler (Override me)
+2024-12-17 14:55:55,662 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 14:56:25,665 DEBUG    smpp.Client.4333664448:352 Socket timeout, listening again
+2024-12-17 14:56:25,668 DEBUG    smpp.Client.4333664448:209 Sending enquire_link PDU
+2024-12-17 14:56:25,668 DEBUG    smpp.Client.4333664448:211 >>b'00000010000000150000000000000004' (16 bytes)
+2024-12-17 14:56:25,773 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 14:56:25,773 DEBUG    smpp.Client.4333664448:256 <<b'00000010800000150000000000000004' (16 bytes)
+2024-12-17 14:56:25,774 DEBUG    smpp.Client.4333664448:264 Read enquire_link_resp PDU
+2024-12-17 14:56:25,879 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 14:56:55,880 DEBUG    smpp.Client.4333664448:352 Socket timeout, listening again
+2024-12-17 14:56:55,881 DEBUG    smpp.Client.4333664448:209 Sending enquire_link PDU
+2024-12-17 14:56:55,881 DEBUG    smpp.Client.4333664448:211 >>b'00000010000000150000000000000005' (16 bytes)
+2024-12-17 14:56:55,985 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 14:56:55,985 DEBUG    smpp.Client.4333664448:256 <<b'00000010800000150000000000000005' (16 bytes)
+2024-12-17 14:56:55,986 DEBUG    smpp.Client.4333664448:264 Read enquire_link_resp PDU
+2024-12-17 14:56:56,087 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 14:57:26,088 DEBUG    smpp.Client.4333664448:352 Socket timeout, listening again
+2024-12-17 14:57:26,090 DEBUG    smpp.Client.4333664448:209 Sending enquire_link PDU
+2024-12-17 14:57:26,090 DEBUG    smpp.Client.4333664448:211 >>b'00000010000000150000000000000006' (16 bytes)
+2024-12-17 14:57:26,194 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 14:57:26,194 DEBUG    smpp.Client.4333664448:256 <<b'00000010800000150000000000000006' (16 bytes)
+2024-12-17 14:57:26,195 DEBUG    smpp.Client.4333664448:264 Read enquire_link_resp PDU
+2024-12-17 14:57:26,300 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 14:57:56,301 DEBUG    smpp.Client.4333664448:352 Socket timeout, listening again
+2024-12-17 14:57:56,303 DEBUG    smpp.Client.4333664448:209 Sending enquire_link PDU
+2024-12-17 14:57:56,303 DEBUG    smpp.Client.4333664448:211 >>b'00000010000000150000000000000007' (16 bytes)
+2024-12-17 14:57:56,409 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 14:57:56,409 DEBUG    smpp.Client.4333664448:256 <<b'00000010800000150000000000000007' (16 bytes)
+2024-12-17 14:57:56,410 DEBUG    smpp.Client.4333664448:264 Read enquire_link_resp PDU
+2024-12-17 14:57:56,515 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 14:58:26,516 DEBUG    smpp.Client.4333664448:352 Socket timeout, listening again
+2024-12-17 14:58:26,517 DEBUG    smpp.Client.4333664448:209 Sending enquire_link PDU
+2024-12-17 14:58:26,517 DEBUG    smpp.Client.4333664448:211 >>b'00000010000000150000000000000008' (16 bytes)
+2024-12-17 14:58:26,623 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 14:58:26,623 DEBUG    smpp.Client.4333664448:256 <<b'00000010800000150000000000000008' (16 bytes)
+2024-12-17 14:58:26,623 DEBUG    smpp.Client.4333664448:264 Read enquire_link_resp PDU
+2024-12-17 14:58:26,729 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 14:58:56,730 DEBUG    smpp.Client.4333664448:352 Socket timeout, listening again
+2024-12-17 14:58:56,732 DEBUG    smpp.Client.4333664448:209 Sending enquire_link PDU
+2024-12-17 14:58:56,732 DEBUG    smpp.Client.4333664448:211 >>b'00000010000000150000000000000009' (16 bytes)
+2024-12-17 14:58:56,838 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 14:58:56,838 DEBUG    smpp.Client.4333664448:256 <<b'00000010800000150000000000000009' (16 bytes)
+2024-12-17 14:58:56,838 DEBUG    smpp.Client.4333664448:264 Read enquire_link_resp PDU
+2024-12-17 14:58:56,944 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 14:59:26,945 DEBUG    smpp.Client.4333664448:352 Socket timeout, listening again
+2024-12-17 14:59:26,947 DEBUG    smpp.Client.4333664448:209 Sending enquire_link PDU
+2024-12-17 14:59:26,947 DEBUG    smpp.Client.4333664448:211 >>b'0000001000000015000000000000000a' (16 bytes)
+2024-12-17 14:59:27,049 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 14:59:27,049 DEBUG    smpp.Client.4333664448:256 <<b'0000001080000015000000000000000a' (16 bytes)
+2024-12-17 14:59:27,050 DEBUG    smpp.Client.4333664448:264 Read enquire_link_resp PDU
+2024-12-17 14:59:27,151 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 14:59:57,152 DEBUG    smpp.Client.4333664448:352 Socket timeout, listening again
+2024-12-17 14:59:57,154 DEBUG    smpp.Client.4333664448:209 Sending enquire_link PDU
+2024-12-17 14:59:57,154 DEBUG    smpp.Client.4333664448:211 >>b'0000001000000015000000000000000b' (16 bytes)
+2024-12-17 14:59:57,260 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 14:59:57,260 DEBUG    smpp.Client.4333664448:256 <<b'0000001080000015000000000000000b' (16 bytes)
+2024-12-17 14:59:57,261 DEBUG    smpp.Client.4333664448:264 Read enquire_link_resp PDU
+2024-12-17 14:59:57,362 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 15:00:27,365 DEBUG    smpp.Client.4333664448:352 Socket timeout, listening again
+2024-12-17 15:00:27,368 DEBUG    smpp.Client.4333664448:209 Sending enquire_link PDU
+2024-12-17 15:00:27,368 DEBUG    smpp.Client.4333664448:211 >>b'0000001000000015000000000000000c' (16 bytes)
+2024-12-17 15:00:27,474 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 15:00:27,474 DEBUG    smpp.Client.4333664448:256 <<b'0000001080000015000000000000000c' (16 bytes)
+2024-12-17 15:00:27,474 DEBUG    smpp.Client.4333664448:264 Read enquire_link_resp PDU
+2024-12-17 15:00:27,580 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 15:00:57,582 DEBUG    smpp.Client.4333664448:352 Socket timeout, listening again
+2024-12-17 15:00:57,584 DEBUG    smpp.Client.4333664448:209 Sending enquire_link PDU
+2024-12-17 15:00:57,584 DEBUG    smpp.Client.4333664448:211 >>b'0000001000000015000000000000000d' (16 bytes)
+2024-12-17 15:00:57,686 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 15:00:57,688 DEBUG    smpp.Client.4333664448:256 <<b'0000001080000015000000000000000d' (16 bytes)
+2024-12-17 15:00:57,688 DEBUG    smpp.Client.4333664448:264 Read enquire_link_resp PDU
+2024-12-17 15:00:57,790 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 15:01:27,791 DEBUG    smpp.Client.4333664448:352 Socket timeout, listening again
+2024-12-17 15:01:27,793 DEBUG    smpp.Client.4333664448:209 Sending enquire_link PDU
+2024-12-17 15:01:27,793 DEBUG    smpp.Client.4333664448:211 >>b'0000001000000015000000000000000e' (16 bytes)
+2024-12-17 15:01:27,898 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 15:01:27,899 DEBUG    smpp.Client.4333664448:256 <<b'0000001080000015000000000000000e' (16 bytes)
+2024-12-17 15:01:27,899 DEBUG    smpp.Client.4333664448:264 Read enquire_link_resp PDU
+2024-12-17 15:01:28,005 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 15:01:58,007 DEBUG    smpp.Client.4333664448:352 Socket timeout, listening again
+2024-12-17 15:01:58,010 DEBUG    smpp.Client.4333664448:209 Sending enquire_link PDU
+2024-12-17 15:01:58,010 DEBUG    smpp.Client.4333664448:211 >>b'0000001000000015000000000000000f' (16 bytes)
+2024-12-17 15:01:58,114 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 15:01:58,115 DEBUG    smpp.Client.4333664448:256 <<b'0000001080000015000000000000000f' (16 bytes)
+2024-12-17 15:01:58,115 DEBUG    smpp.Client.4333664448:264 Read enquire_link_resp PDU
+2024-12-17 15:01:58,217 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 15:02:28,219 DEBUG    smpp.Client.4333664448:352 Socket timeout, listening again
+2024-12-17 15:02:28,221 DEBUG    smpp.Client.4333664448:209 Sending enquire_link PDU
+2024-12-17 15:02:28,221 DEBUG    smpp.Client.4333664448:211 >>b'00000010000000150000000000000010' (16 bytes)
+2024-12-17 15:02:28,327 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 15:02:28,327 DEBUG    smpp.Client.4333664448:256 <<b'00000010800000150000000000000010' (16 bytes)
+2024-12-17 15:02:28,328 DEBUG    smpp.Client.4333664448:264 Read enquire_link_resp PDU
+2024-12-17 15:02:28,431 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 15:02:58,434 DEBUG    smpp.Client.4333664448:352 Socket timeout, listening again
+2024-12-17 15:02:58,437 DEBUG    smpp.Client.4333664448:209 Sending enquire_link PDU
+2024-12-17 15:02:58,437 DEBUG    smpp.Client.4333664448:211 >>b'00000010000000150000000000000011' (16 bytes)
+2024-12-17 15:02:58,543 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 15:02:58,543 DEBUG    smpp.Client.4333664448:256 <<b'00000010800000150000000000000011' (16 bytes)
+2024-12-17 15:02:58,543 DEBUG    smpp.Client.4333664448:264 Read enquire_link_resp PDU
+2024-12-17 15:02:58,648 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 15:03:06,722 INFO     root:197 Shutting down...
+2024-12-17 15:03:06,723 DEBUG    smpp.Client.4333664448:209 Sending unbind PDU
+2024-12-17 15:03:06,723 DEBUG    smpp.Client.4333664448:211 >>b'00000010000000060000000000000012' (16 bytes)
+2024-12-17 15:03:06,723 DEBUG    smpp.Client.4333664448:244 Waiting for PDU...
+2024-12-17 15:03:06,767 DEBUG    smpp.Client.4333664448:256 <<b'00000010800000060000000000000012' (16 bytes)
+2024-12-17 15:03:06,767 DEBUG    smpp.Client.4333664448:264 Read unbind_resp PDU
+2024-12-17 15:03:06,767 INFO     root:150 Unbound from server
+2024-12-17 15:03:06,767 INFO     smpp.Client.4333664448:146 Disconnecting...
+2024-12-17 15:03:06,767 INFO     root:155 Disconnected from SMPP server
+2024-12-17 15:03:13,303 INFO     client:52 - Connected to 34.47.244.104:2775
+2024-12-17 15:03:13,341 INFO     client:99 - Successfully bound as transceiver
+2024-12-17 15:03:13,342 INFO     client:149 - Sent submit_sm - Sequence: 3, Message: Test message with TLV params
+2024-12-17 15:03:13,342 ERROR    client:159 - Failed to send message
+2024-12-17 15:03:43,348 ERROR    client:182 - Enquire link error: [Errno 32] Broken pipe
+2024-12-17 15:03:44,645 INFO     client:234 - Shutting down...
+2024-12-17 15:03:44,646 ERROR    client:201 - Error during disconnect: [Errno 32] Broken pipe
+2024-12-17 15:03:46,788 INFO     client:52 - Connected to 34.47.244.104:2775
+2024-12-17 15:03:46,820 INFO     client:99 - Successfully bound as transceiver
+2024-12-17 15:03:46,820 INFO     client:149 - Sent submit_sm - Sequence: 3, Message: Test message with TLV params
+2024-12-17 15:03:46,820 ERROR    client:159 - Failed to send message
+2024-12-17 15:04:00,417 INFO     client:234 - Shutting down...
+2024-12-17 15:04:00,418 ERROR    client:201 - Error during disconnect: [Errno 32] Broken pipe
+2024-12-17 15:04:23,656 INFO     client:52 - Connected to 34.47.244.104:2775
+2024-12-17 15:04:23,688 INFO     client:99 - Successfully bound as transceiver
+2024-12-17 15:04:23,688 DEBUG    client:152 - Sending PDU - Length: 165, Sequence: 3
+2024-12-17 15:04:23,688 DEBUG    client:153 - PDU Hex: 000000a500000004000000000000000300000053414e4a555000010139383736353433323130000000000000010003001d54657374206d6573736167652066726f6d20534d505020636c69656e74140000133135303731363735373736343836343034323114010013313530313636343232303030303031303232371405002537613531306464332d653738392d343031612d616432382d38343435356438393937333100
+2024-12-17 15:04:23,688 INFO     client:157 - Sent submit_sm - Sequence: 3, Message: Test message from SMPP client
+2024-12-17 15:04:23,688 ERROR    client:180 - Failed to receive valid submit_sm_resp
+2024-12-17 15:04:23,688 ERROR    client:251 - Failed to send message, disconnecting...
+2024-12-17 15:04:53,694 ERROR    client:203 - Enquire link error: [Errno 32] Broken pipe
+2024-12-17 15:07:54,356 INFO     client:258 - Shutting down...
+2024-12-17 15:07:54,358 ERROR    client:222 - Error during disconnect: [Errno 32] Broken pipe
+2024-12-17 15:08:03,958 INFO     client:55 - Connected to 34.47.244.104:2775
+2024-12-17 15:08:03,987 INFO     client:112 - Successfully bound as transceiver
+2024-12-17 15:08:03,987 DEBUG    client:169 - Sent PDU - Length: 165, Sequence: 3
+2024-12-17 15:08:03,988 DEBUG    client:170 - PDU Hex: 000000a500000004000000000000000300000053414e4a555000010139383736353433323130000000000000010003001d54657374206d6573736167652066726f6d20534d505020636c69656e74140000133135303731363735373736343836343034323114010013313530313636343232303030303031303232371405002531663965666664342d303532622d346361352d396664632d32636466386265623332666600
+2024-12-17 15:08:03,988 ERROR    client:201 - Failed to receive valid submit_sm_resp
+2024-12-17 15:08:03,988 ERROR    client:278 - Failed to send message
+2024-12-17 15:10:15,413 INFO     root:43 Connecting to 34.47.244.104:2775
+2024-12-17 15:10:15,413 INFO     smpp.Client.4376918208:134 Connecting to 34.47.244.104:2775...
+2024-12-17 15:10:15,455 DEBUG    root:49 System ID: rohitghawale
+2024-12-17 15:10:15,455 DEBUG    root:50 Password length: 5
+2024-12-17 15:10:15,455 DEBUG    smpp.Client.4376918208:159 Receiver mode
+2024-12-17 15:10:15,455 DEBUG    smpp.Client.4376918208:209 Sending bind_transceiver PDU
+2024-12-17 15:10:15,456 DEBUG    smpp.Client.4376918208:211 >>b'00000028000000090000000000000002726f68697467686177616c6500726f686974000034010100' (40 bytes)
+2024-12-17 15:10:15,456 DEBUG    smpp.Client.4376918208:244 Waiting for PDU...
+2024-12-17 15:10:15,488 DEBUG    smpp.Client.4376918208:256 <<b'0000001d800000090000000000000002726f68697467686177616c6500' (29 bytes)
+2024-12-17 15:10:15,488 DEBUG    smpp.Client.4376918208:264 Read bind_transceiver_resp PDU
+2024-12-17 15:10:15,488 INFO     root:63 Successfully bound as transceiver
+2024-12-17 15:10:15,488 INFO     root:161 Connected and bound successfully
+2024-12-17 15:10:15,488 INFO     root:81 Sending message: Hello, this is a test message!
+2024-12-17 15:10:15,488 DEBUG    root:82 Source: SANJUP
+2024-12-17 15:10:15,488 DEBUG    root:83 Destination: 1234567890
+2024-12-17 15:10:15,488 DEBUG    root:93 Added Template ID TLV: 1507167577648640421
+2024-12-17 15:10:15,488 DEBUG    root:100 Added PE ID TLV: 1501664220000010227
+2024-12-17 15:10:15,488 DEBUG    root:106 Added Auth Code TLV: 998a4f19-e6eb-4d4b-b718-799835285e5c
+2024-12-17 15:10:15,488 DEBUG    root:108 Optional parameters: {5120: b'1507167577648640421', 5121: b'1501664220000010227', 5125: b'998a4f19-e6eb-4d4b-b718-799835285e5c\x00'}
+2024-12-17 15:10:15,488 DEBUG    smpp.Client.4376918208:209 Sending submit_sm PDU
+2024-12-17 15:10:15,489 DEBUG    smpp.Client.4376918208:211 >>b'0000004f00000004000000000000000300010153414e4a555000010131323334353637383930000000000000010000001e48656c6c6f2c207468697320697320612074657374206d65737361676521' (79 bytes)
+2024-12-17 15:10:15,489 INFO     root:125 Message sent successfully with response: {5120: b'1507167577648640421', 5121: b'1501664220000010227', 5125: b'998a4f19-e6eb-4d4b-b718-799835285e5c\x00'}
+2024-12-17 15:10:15,489 DEBUG    smpp.Client.4376918208:244 Waiting for PDU...
+2024-12-17 15:10:15,642 DEBUG    smpp.Client.4376918208:256 <<b'0000001180000004000000000000000300' (17 bytes)
+2024-12-17 15:10:15,643 DEBUG    smpp.Client.4376918208:264 Read submit_sm_resp PDU
+2024-12-17 15:10:15,643 WARNING  smpp.Client.4376918208:322 Message sent handler (Override me)
+2024-12-17 15:10:15,748 DEBUG    smpp.Client.4376918208:244 Waiting for PDU...
+2024-12-17 15:10:45,751 DEBUG    smpp.Client.4376918208:352 Socket timeout, listening again
+2024-12-17 15:10:45,754 DEBUG    smpp.Client.4376918208:209 Sending enquire_link PDU
+2024-12-17 15:10:45,755 DEBUG    smpp.Client.4376918208:211 >>b'00000010000000150000000000000004' (16 bytes)
+2024-12-17 15:10:45,861 DEBUG    smpp.Client.4376918208:244 Waiting for PDU...
+2024-12-17 15:10:45,861 ERROR    root:182 Error reading PDU: 
+2024-12-17 15:10:45,862 DEBUG    smpp.Client.4376918208:209 Sending unbind PDU
+2024-12-17 15:10:45,862 DEBUG    smpp.Client.4376918208:211 >>b'00000010000000060000000000000005' (16 bytes)
+2024-12-17 15:10:45,862 DEBUG    smpp.Client.4376918208:244 Waiting for PDU...
+2024-12-17 15:10:45,862 ERROR    root:141 Error unbinding: 
+2024-12-17 15:10:45,862 INFO     smpp.Client.4376918208:146 Disconnecting...
+2024-12-17 15:10:45,862 WARNING  smpp.Client.4376918208:149 <smpplib.client.Client object at 0x104e278c0> is disconnecting in the bound state
+2024-12-17 15:10:45,862 INFO     root:144 Disconnected from SMPP server
+2024-12-17 17:07:43,120 INFO     root:43 Connecting to 34.47.244.104:2775
+2024-12-17 17:07:43,120 INFO     smpp.Client.4365465792:134 Connecting to 34.47.244.104:2775...
+2024-12-17 17:07:43,140 DEBUG    root:49 System ID: rohitghawale
+2024-12-17 17:07:43,140 DEBUG    root:50 Password length: 5
+2024-12-17 17:07:43,140 DEBUG    smpp.Client.4365465792:159 Receiver mode
+2024-12-17 17:07:43,140 DEBUG    smpp.Client.4365465792:209 Sending bind_transceiver PDU
+2024-12-17 17:07:43,140 DEBUG    smpp.Client.4365465792:211 >>b'00000028000000090000000000000002726f68697467686177616c6500726f686974000034010100' (40 bytes)
+2024-12-17 17:07:43,140 DEBUG    smpp.Client.4365465792:244 Waiting for PDU...
+2024-12-17 17:07:43,161 DEBUG    smpp.Client.4365465792:256 <<b'0000001d800000090000000000000002726f68697467686177616c6500' (29 bytes)
+2024-12-17 17:07:43,162 DEBUG    smpp.Client.4365465792:264 Read bind_transceiver_resp PDU
+2024-12-17 17:07:43,162 INFO     root:63 Successfully bound as transceiver
+2024-12-17 17:07:43,162 INFO     root:161 Connected and bound successfully
+2024-12-17 17:07:43,162 INFO     root:81 Sending message: Hello, this is a test message!
+2024-12-17 17:07:43,162 DEBUG    root:82 Source: SANJUP
+2024-12-17 17:07:43,162 DEBUG    root:83 Destination: 1234567890
+2024-12-17 17:07:43,162 DEBUG    root:93 Added Template ID TLV: 1507167577648640421
+2024-12-17 17:07:43,162 DEBUG    root:100 Added PE ID TLV: 1501664220000010227
+2024-12-17 17:07:43,162 DEBUG    root:106 Added Auth Code TLV: d7f745e1-d661-454e-b545-945d9befaffd
+2024-12-17 17:07:43,162 DEBUG    root:108 Optional parameters: {5120: b'1507167577648640421', 5121: b'1501664220000010227', 5125: b'd7f745e1-d661-454e-b545-945d9befaffd\x00'}
+2024-12-17 17:07:43,162 DEBUG    smpp.Client.4365465792:209 Sending submit_sm PDU
+2024-12-17 17:07:43,162 DEBUG    smpp.Client.4365465792:211 >>b'0000004f00000004000000000000000300010153414e4a555000010131323334353637383930000000000000010000001e48656c6c6f2c207468697320697320612074657374206d65737361676521' (79 bytes)
+2024-12-17 17:07:43,162 INFO     root:125 Message sent successfully with response: {5120: b'1507167577648640421', 5121: b'1501664220000010227', 5125: b'd7f745e1-d661-454e-b545-945d9befaffd\x00'}
+2024-12-17 17:07:43,162 DEBUG    smpp.Client.4365465792:244 Waiting for PDU...
+2024-12-17 17:07:43,482 DEBUG    smpp.Client.4365465792:256 <<b'0000001180000004000000000000000300' (17 bytes)
+2024-12-17 17:07:43,482 DEBUG    smpp.Client.4365465792:264 Read submit_sm_resp PDU
+2024-12-17 17:07:43,482 WARNING  smpp.Client.4365465792:322 Message sent handler (Override me)
+2024-12-17 17:07:43,587 DEBUG    smpp.Client.4365465792:244 Waiting for PDU...
+2024-12-17 17:08:13,590 DEBUG    smpp.Client.4365465792:352 Socket timeout, listening again
+2024-12-17 17:08:13,594 DEBUG    smpp.Client.4365465792:209 Sending enquire_link PDU
+2024-12-17 17:08:13,594 DEBUG    smpp.Client.4365465792:211 >>b'00000010000000150000000000000004' (16 bytes)
+2024-12-17 17:08:13,700 DEBUG    smpp.Client.4365465792:244 Waiting for PDU...
+2024-12-17 17:08:13,701 ERROR    root:182 Error reading PDU: 
+2024-12-17 17:08:13,701 DEBUG    smpp.Client.4365465792:209 Sending unbind PDU
+2024-12-17 17:08:13,701 DEBUG    smpp.Client.4365465792:211 >>b'00000010000000060000000000000005' (16 bytes)
+2024-12-17 17:08:13,702 DEBUG    smpp.Client.4365465792:244 Waiting for PDU...
+2024-12-17 17:08:13,702 ERROR    root:141 Error unbinding: 
+2024-12-17 17:08:13,702 INFO     smpp.Client.4365465792:146 Disconnecting...
+2024-12-17 17:08:13,702 WARNING  smpp.Client.4365465792:149 <smpplib.client.Client object at 0x10433b8c0> is disconnecting in the bound state
+2024-12-17 17:08:13,703 INFO     root:144 Disconnected from SMPP server

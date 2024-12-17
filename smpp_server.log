@@ -1,0 +1,16 @@
+2024-12-17 14:51:34,057 INFO     server:432 - Starting SMPP Server with configuration:
+2024-12-17 14:51:34,058 INFO     server:435 -   host: 0.0.0.0
+2024-12-17 14:51:34,058 INFO     server:435 -   port: 2775
+2024-12-17 14:51:34,058 INFO     server:435 -   system_id: rohitghawale
+2024-12-17 14:51:34,058 INFO     server:435 -   api_url: https://smartping-backend.goflipo.com/api/main/verify-scrubbing-logs
+2024-12-17 14:51:34,058 INFO     server:68 - SMPP Server started on 0.0.0.0:2775
+2024-12-17 14:51:36,381 INFO     server:441 - Shutting down server...
+2024-12-17 14:51:36,382 INFO     server:90 - Server stopped
+2024-12-17 14:55:49,266 INFO     server:432 - Starting SMPP Server with configuration:
+2024-12-17 14:55:49,267 INFO     server:435 -   host: 0.0.0.0
+2024-12-17 14:55:49,267 INFO     server:435 -   port: 2775
+2024-12-17 14:55:49,267 INFO     server:435 -   system_id: rohitghawale
+2024-12-17 14:55:49,267 INFO     server:435 -   api_url: https://smartping-backend.goflipo.com/api/main/verify-scrubbing-logs
+2024-12-17 14:55:49,267 INFO     server:68 - SMPP Server started on 0.0.0.0:2775
+2024-12-17 14:55:50,500 INFO     server:441 - Shutting down server...
+2024-12-17 14:55:50,500 INFO     server:90 - Server stopped
