@@ -1,0 +1,4 @@
+
+# any files with .log extension
+*.log
+*.pcap
