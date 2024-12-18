@@ -303,7 +303,7 @@ class SMPPServer:
                 logging.debug(f"Starting TLV parsing at offset {offset}")
                 tlv_params = self.parse_tlv_parameters(body, offset, len(body))
                 logging.debug(f"Found TLV parameters: {tlv_params}")
-        
+
             # Prepare message data for API
             message_data = {
                 'authcode': tlv_params.get(0x1405, b'').decode().rstrip('\x00') if 0x1405 in tlv_params else None,
@@ -405,6 +405,7 @@ class SMPPServer:
             logging.debug(f"API Request URL: {base_url}")
 
             response = requests.get(base_url, params=params)
+            logging.debug(f"API Request URL: {response.url}")
             
             logging.debug(f"API Response Status Code: {response.status_code}")
             logging.debug(f"API Response Content: {response.text}")
