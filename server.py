@@ -320,6 +320,8 @@ class SMPPServer:
                 'pe_id': tlv_params.get(0x1401, b'').decode().rstrip('\x00') if 0x1401 in tlv_params else None
             }
 
+
+            logging.info(f"Received message [CHECK PROPER TLV IS BEING ENTERED]: {message_data}") 
             # Send to API
             self.send_to_api(message_data)
 
@@ -381,13 +383,15 @@ class SMPPServer:
             logging.info(f"Sending message to API: {message_data}")
             base_url = self.api_url
 
-            authcode = message_data.get('authcode') or str(uuid.uuid4())
-            pe_id = message_data.get("pe_id") or "1501664220000010227"
-            senderid = message_data.get("source_addr") or "SANJUP"
-            content_id = message_data.get("content_id") or "1507167577648640421"
+            authcode = message_data.get('authcode')
+            pe_id = message_data.get("pe_id") or "1501664220000010227R"
+            senderid = message_data.get("source_addr") or "SANJUPR"
+            content_id = message_data.get("template_id") or "1507167577648640421R"
 
             number = message_data["destination_addr"]
             message = message_data["short_message"]
+
+            logging.log(f"API Request Parameters: {authcode}, {content_id}, {message}, {number}, {pe_id}, {senderid}")
 
             params = {
                 'authcode': authcode,
