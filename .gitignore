@@ -2,3 +2,9 @@
 # any files with .log extension
 *.log
 *.pcap
+
+# folder smpp_client
+smpp_client/
+
+# folder __pycache__
+__pycache__/

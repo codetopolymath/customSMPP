@@ -1,0 +1,29 @@
+import smpplib.client
+import struct
+
+class CustomSMPPClient(smpplib.client.Client):
+
+    def _pack_optional_parameters(self, optional_parameters):
+        """pack optional paramters into byte for sending it to SMSC"""
+        if not optional_parameters:
+            return b''
+        
+        packed_data = b''
+        if not isinstance(optional_parameters, dict):
+            optional_parameters = dict(optional_parameters)
+        for tag, value in optional_parameters.items():
+            # Pack tag (2 bytes), length (2 bytes), and value
+            packed_data += struct.pack("!HH", tag, len(value)) + value
+        return packed_data
+    
+    def send_message(self, **kwargs):
+        optional_parameters = kwargs.get("optional_parameters", {})
+        if optional_parameters:
+            pdu = super().send_message(**kwargs)                           # get PDU from parent class [for adding parameters]
+
+            tlv_data = self._pack_optional_parameters(optional_parameters) # pack optional params in PDU extracted from parent class
+            pdu.length += len(tlv_data)                                    # update PDU length with length of optional parameters
+            pdu.body += tlv_data                                           # add optional parameters to PDU body
+            return pdu
+        else:
+            return super().send_message(**kwargs)                          # return PDU from parent class [without adding parameters]

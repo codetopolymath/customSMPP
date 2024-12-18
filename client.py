@@ -5,10 +5,26 @@ import smpplib.client
 import smpplib.consts
 import time
 import uuid
-import struct
-import binascii
+from smpplib.command import Command, SubmitSM, Param
 
-# Configure logging with more detailed format
+# First patch the OPTIONAL_PARAMS to include our custom TLVs
+smpplib.consts.OPTIONAL_PARAMS.update({
+    'template_id': 0x1400,
+    'pe_id': 0x1401,
+    'auth_code': 0x1405
+})
+
+# Patch SubmitSM to include our custom TLVs
+SubmitSM.params.update({
+    'template_id': Param(type=str, max=65),
+    'pe_id': Param(type=str, max=65),
+    'auth_code': Param(type=str, max=65)
+})
+
+# Add our parameters to params_order
+SubmitSM.params_order = SubmitSM.params_order + ('template_id', 'pe_id', 'auth_code')
+
+# Configure logging
 logging.basicConfig(
     level=logging.DEBUG,
     format='%(asctime)s %(levelname)-8s %(name)s:%(lineno)d %(message)s',
@@ -18,18 +34,6 @@ logging.basicConfig(
     ]
 )
 
-def hex_dump(data, prefix=''):
-    """Helper function to create readable hex dumps of binary data"""
-    hex_data = binascii.hexlify(data).decode()
-    chunks = [hex_data[i:i+2] for i in range(0, len(hex_data), 2)]
-    lines = [chunks[i:i+16] for i in range(0, len(chunks), 16)]
-    result = []
-    for line in lines:
-        hex_part = ' '.join(line)
-        ascii_part = ''.join(chr(int(c, 16)) if 32 <= int(c, 16) <= 126 else '.' for c in line)
-        result.append(f"{prefix}{hex_part:<48} | {ascii_part}")
-    return '\n'.join(result)
-
 class SMPPClient:
     def __init__(self, host, port, system_id, password):
         self.host = host
@@ -38,31 +42,19 @@ class SMPPClient:
         self.password = password
         self.client = None
         self.connected = False
-        
-        # Define TLV tag constants
-        self.TLV_TEMPLATE_ID = 0x1400  # 5120 in decimal
-        self.TLV_PE_ID = 0x1401       # 5121 in decimal
-        self.TLV_AUTH_CODE = 0x1405   # Auth code tag
 
     def connect(self):
         """Establish connection with SMPP server"""
         try:
-            # Create client instance with extended timeout
-            self.client = smpplib.client.Client(self.host, self.port, timeout=30, allow_unknown_opt_params=True)
-            
-            # Set interface version
+            self.client = smpplib.client(self.host, self.port, timeout=30, allow_unknown_opt_params=True)
             self.client.interface_version = smpplib.consts.SMPP_VERSION_34
             
             logging.info(f"Connecting to {self.host}:{self.port}")
             self.client.connect()
-
-
             
-            # Debug logging
             logging.debug(f"System ID: {self.system_id}")
             logging.debug(f"Password length: {len(self.password)}")
             
-            # Bind as transceiver with additional parameters
             self.client.bind_transceiver(
                 system_id=self.system_id,
                 password=self.password,
@@ -82,48 +74,20 @@ class SMPPClient:
             return False
 
     def send_message(self, source_addr, destination_addr, message, template_id=None, pe_id=None, auth_code=None):
-        """Send message with optional TLV parameters"""
+        """Send message with TLV parameters"""
         if not self.connected:
             logging.error("Not connected to SMPP server")
             return False
 
         try:
-            # Encode message
             parts, encoding_flag, msg_type_flag = smpplib.gsm.make_parts(message)
             
             logging.info(f"Sending message: {message}")
             logging.debug(f"Source: {source_addr}")
             logging.debug(f"Destination: {destination_addr}")
-            
-            # Prepare optional parameters dictionary
-            optional_params = {}
-            
-            # Add Template ID if provided
-            if template_id is not None:
-                # Convert to string and encode as bytes
-                template_id_str = str(template_id)
-                optional_params[self.TLV_TEMPLATE_ID] = template_id_str.encode()
-                logging.debug(f"Added Template ID TLV: {template_id}")
-            
-            # Add PE ID if provided
-            if pe_id is not None:
-                # Convert to string and encode as bytes
-                pe_id_str = str(pe_id)
-                optional_params[self.TLV_PE_ID] = pe_id_str.encode()
-                logging.debug(f"Added PE ID TLV: {pe_id}")
-            
-            # Add Auth Code if provided
-            if auth_code is not None:
-                # For auth code, add a null terminator to the string
-                optional_params[self.TLV_AUTH_CODE] = auth_code.encode() + b'\0'
-                logging.debug(f"Added Auth Code TLV: {auth_code}")
-            
-            logging.debug(f"Optional parameters before sending: {optional_params}")
-            
-            # Send message with optional parameters
 
-            logging.debug(f"hex dump before sending PDU:\n{hex_dump(message.encode())}")
-            response = self.client.send_message(
+            # Create PDU
+            pdu = self.client.send_message(
                 source_addr=source_addr,
                 destination_addr=destination_addr,
                 short_message=message.encode(),
@@ -134,9 +98,20 @@ class SMPPClient:
                 source_addr_npi=smpplib.consts.SMPP_NPI_ISDN,
                 dest_addr_ton=smpplib.consts.SMPP_TON_INTL,
                 dest_addr_npi=smpplib.consts.SMPP_NPI_ISDN,
-                optional_parameters=optional_params
+                template_id=template_id,
+                pe_id=pe_id,
+                auth_code=auth_code
             )
-            logging.debug(f"Hex dump of sent PDU:\n{hex_dump(response)}")
+            
+            logging.debug(f"PDU command: {pdu.command}")
+            logging.debug(f"PDU sequence: {pdu.sequence}")
+            logging.debug(f"PDU template_id: {getattr(pdu, 'template_id', None)}")
+            logging.debug(f"PDU pe_id: {getattr(pdu, 'pe_id', None)}")
+            logging.debug(f"PDU auth_code: {getattr(pdu, 'auth_code', None)}")
+            
+            # Log the raw PDU for debugging
+            packed_pdu = pdu.pack()
+            logging.debug(f"Raw PDU hex: {packed_pdu.hex()}")
             
             return True
             
@@ -188,11 +163,11 @@ def main():
                 auth_code=auth_code
             )
             
-            # Keep connection alive and handle incoming messages
+            # Keep connection alive
             while True:
                 try:
                     client.client.read_once()
-                    time.sleep(0.1)  # Prevent CPU overload
+                    time.sleep(0.1)
                 except Exception as e:
                     logging.error(f"Error reading PDU: {str(e)}")
                     break
