@@ -399,6 +399,9 @@ class SMPPServer:
             }
 
             logging.debug(f"API Request Parameters: {params}")
+            # printing complete url for debugging [before sending request]
+            logging.debug(f"API Request URL: {base_url}")
+
             response = requests.get(base_url, params=params)
             
             logging.debug(f"API Response Status Code: {response.status_code}")
@@ -427,7 +430,7 @@ def main():
         'port': 2775,
         'system_id': 'rohitghawale',
         'password': 'rohit',
-        'api_url': 'smartping-backend.goflipo.com/api/main/verify-scrubbing-logs'
+        'api_url': 'smartping-backend.goflipo.com/api/main/verify-scrubbing-logs/'
     }
     
     logging.info("Starting SMPP Server with configuration:")
