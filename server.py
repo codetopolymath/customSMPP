@@ -430,7 +430,7 @@ def main():
         'port': 2775,
         'system_id': 'rohitghawale',
         'password': 'rohit',
-        'api_url': 'smartping-backend.goflipo.com/api/main/verify-scrubbing-logs/'
+        'api_url': 'https://smartping-backend.goflipo.com/api/main/verify-scrubbing-logs/'
     }
     
     logging.info("Starting SMPP Server with configuration:")
